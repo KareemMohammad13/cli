@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Parser {
-    static enum coms {clear,cd,ls,cp,mv,rm,mkdir,rmdir,cat,more,pwd,date,help}
+    static enum coms {clear,cd,ls,cp,mv,rm,mkdir,rmdir,cat,more,pwd,date,help,kimo}
     private static Vector <String> args;
     private static String cmd;
 
@@ -105,6 +105,9 @@ public class Parser {
                 break;
             case 12:
                 Terminal.help();
+                break;
+            case 13:
+                new Kimo().executeCommand();
                 break;
         }
     }
